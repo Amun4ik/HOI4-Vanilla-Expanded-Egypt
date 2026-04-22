@@ -1,0 +1,574 @@
+characters = {
+
+	EGY_Farouk_Muhammad_Ali = { #Can become Country Leader later
+		name = EGY_Farouk_Muhammad_Ali
+		portraits = {
+			civilian = {
+				large = GFX_portrait_EGY_farouk_i
+			}
+		}
+	}
+	
+	EGY_Faud_i = { # Will die by event
+		name = EGY_Faud_i
+		portraits = {
+			civilian = {
+				large = GFX_portrait_EGY_Fuad_I
+			}
+		}
+		
+		country_leader = {
+			ideology = despotism
+			traits = { EGY_conservativeking }
+			expire = "1936.4.28.1"
+			id = -1
+		}
+	}
+	
+	EGY_hassan_banna = {
+		name = EGY_hassan_banna
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_hassan_banna"
+				large = GFX_portrait_EGY_hassan_banna
+			}
+			civilian = {
+				large = GFX_portrait_EGY_hassan_banna
+			}
+		}
+		
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { EGY_islamicteacher }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = hassan_banna
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				IRQ_knight_of_arabism
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+	
+	EGY_mustafa_nahas = {
+		name = EGY_mustafa_nahas
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_mustafa_nahas"
+				large = GFX_portrait_EGY_mustafa_nahas
+			}
+			civilian = {
+				large = GFX_portrait_EGY_mustafa_nahas
+			}
+		}
+		
+		country_leader = {
+			ideology = conservatism
+			traits = { conservative_grandee }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = mustafa_nahas
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				ARG_harsh_democrat
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+	
+	EGY_henri_curiel = {
+		name = EGY_henri_curiel
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_henri_curiel"
+				large = GFX_portrait_EGY_henri_curiel
+			}
+			civilian = {
+				large = GFX_portrait_EGY_henri_curiel
+			}
+		}
+		
+		country_leader = {
+			ideology = marxism
+			traits = { EGY_anti_colonialist }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = henri_curiel
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				communist_orator
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+	
+	############### СОВЕТНИКИ
+	
+	EGY_mohamed_tawfik = {
+		name=EGY_mohamed_tawfik
+		portraits={
+			army={
+				small="GFX_idea_EGY_mohammed_ali_tewfik"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = mohamed_tawfik
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				economic_reformer
+			}
+		}
+	}
+	
+	EGY_ahmed_hussein = {
+		name = EGY_ahmed_hussein
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_ahmed_hussayn"
+				large = GFX_portrait_EGY_Ahmed_Hussein
+			}
+			civilian = {
+				large = GFX_portrait_EGY_Ahmed_Hussein
+			}
+		}
+		
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = ahmed_hussein
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				fascist_demagogue
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+	
+	EGY_stewart_symes = {
+		name = EGY_stewart_symes
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_stewart_symes"
+				large = GFX_portrait_EGY_Stewart_Symes
+			}
+			civilian = {
+				large = GFX_portrait_EGY_Stewart_Symes
+			}
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = stewart_symes
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				IRQ_british_lackey
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}		
+	}
+	
+	EGY_aly_maher_masha = {
+		name = EGY_aly_maher_pasha
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_stewart_symes"
+				large = GFX_portrait_EGY_Aly_Maher_Pasha
+			}
+			civilian = {
+				large = GFX_portrait_EGY_Aly_Maher_Pasha
+			}
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = aly_maher_pasha
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				monarchist_media_mogul
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}		
+	}
+	
+	EGY_muhammad_mahmoud = {
+		name = EGY_muhammad_mahmoud
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_muhammad_mahmoud_pasha"
+				large = GFX_portrait_EGY_Mohamed_Mahmoud
+			}
+			civilian = {
+				large = GFX_portrait_EGY_Mohamed_Mahmoud
+			}
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = muhammad_mahmoud
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				captain_of_industry
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}		
+	}
+	
+    ############### ГЕНЕРАЛЫ
+	
+	EGY_mohamed_haidar = {
+		name = EGY_mohamed_haidar
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_Mohamed_Haidar"
+				large = GFX_portrait_EGY_Mohamed_Haidar
+			}
+		}
+
+		corps_commander = {
+			traits = { media_personality cavalry_officer harsh_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = mohamed_haidar
+			ledger = army
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}	
+	}
+	
+	EGY_mohammed_salim = {
+		name = EGY_mohammed_salim
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_Mohammed_Salim"
+				large = GFX_portrait_EGY_Mohammed_Salim
+			}
+		}
+
+		corps_commander = {
+			traits = { militias_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = mohammed_salim
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				prince_of_terror
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}		
+	}
+	
+	EGY_aziz_ezzat = {
+		name = EGY_aziz_ezzat
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_aziz_ezzat"
+				large = GFX_portrait_EGY_Aziz_Ezzat
+			}
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = aziz_ezzat
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				tenacious_negotiator
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}		
+	}
+
+	EGY_gamal_abdel_nasser = {
+		name = EGY_gamal_abdel_nasser
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_Gamal_Abdel_Nasser_army"
+				large = GFX_portrait_EGY_Gamal_Abdel_Nasser_army
+			}
+			civilian = {
+				large = GFX_portrait_EGY_Gamal_Abdel_Nasser
+			}
+		}
+
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+		advisor = {
+			cost = 50
+			slot = high_command
+			idea_token = gamal_abdel_nasser
+			ledger = army
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				army_infantry_1
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}		
+	}
+	
+	EGY_suleiman_ezzat = {
+		name = EGY_suleiman_ezzat
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_Suleiman_Ezzat"
+				large = GFX_portrait_EGY_Suleiman_Ezzat
+			}
+		}
+
+		navy_leader = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+
+		advisor = {
+			slot = navy_chief
+			idea_token = suleiman_ezzat
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost = 50
+			ai_will_do = {
+				base = 0.200
+			}
+		}		
+	}
+	
+	EGY_abdel_hakim_amer = {
+		name = EGY_abdel_hakim_amer
+
+		portraits = {
+			army = {
+				large = GFX_portrait_EGY_Abdel_Hakim_Amer
+			}
+		}
+
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}	
+	}
+	
+	EGY_hussein_el-shafei = {
+		name = EGY_hussein_el-shafei
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_Hussein_el-Shafei"
+				large = GFX_portrait_EGY_Hussein_el-Shafei
+			}
+			civilian = {
+				large = GFX_portrait_EGY_Hussein_el-Shafei
+			}
+		}
+
+		corps_commander = {
+			traits = { armor_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+		advisor = {
+			cost = 50
+			slot = high_command
+			idea_token = hussein_el-shafei
+			ledger = army
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				army_armored_1
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}		
+	}
+	
+	EGY_hussein_refki = {
+		name = EGY_hussein_refki
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_hussein_refki"
+				large = GFX_portrait_EGY_Hussein_Refki
+			}
+			civilian = {
+				large = GFX_portrait_EGY_Hussein_Refki
+			}
+		}
+
+		field_marshal = {
+			traits = { commando politically_connected media_personality }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = hussein_refki
+			ledger = army
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				army_commando_2
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}		
+	}
+	
+	EGY_muhammad_naguib = {
+		name = EGY_muhammad_naguib
+
+		portraits = {
+			army = {
+				small = "GFX_idea_EGY_muhammad_naguib"
+				large = GFX_portrait_EGY_Muhammad_Naguib
+			}
+		}
+
+		corps_commander = {
+			traits = { career_officer infantry_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = muhammad_naguib
+			ledger = army
+			allowed = {
+				original_tag = EGY
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}	
+	}
+}

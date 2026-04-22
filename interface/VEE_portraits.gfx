@@ -1,0 +1,103 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_farouk_i"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_farouk_i.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Fuad_I"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Fuad_I.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_hassan_banna"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_hassan_banna.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_mustafa_nahas"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_mustafa_nahas.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_EGY_henri_curiel"
+		texturefile = "gfx/leaders/EGY/EGY_henri_curiel.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Abdel_Hakim_Amer"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Abdel_Hakim_Amer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Ahmed_Hussein"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Ahmed_Hussein.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Aly_Maher_Pasha"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Aly_Maher_Pasha.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Aziz_Ezzat"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Aziz_Ezzat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Gamal_Abdel_Nasser"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Gamal_Abdel_Nasser.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Gamal_Abdel_Nasser_army"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Gamal_Abdel_Nasser_army.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Hussein_el-Shafei"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Hussein_el-Shafei.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Hussein_Refki"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Hussein_Refki.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Mohamed_Haidar"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Mohamed_Haidar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Mohammed_Salim"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Mohammed_Salim.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Muhammad_Anwar_Sadat"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Muhammad_Anwar_Sadat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Muhammad_Naguib"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Muhammad_Naguib.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Stewart_Symes"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Stewart_Symes.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_EGY_Suleiman_Ezzat"
+		texturefile = "gfx/leaders/EGY/portrait_EGY_Suleiman_Ezzat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_Egypt_Mohamed_Mahmoud"
+		texturefile = "gfx/leaders/EGY/portrait_Egypt_Mohamed_Mahmoud.dds"
+	}
+
+}

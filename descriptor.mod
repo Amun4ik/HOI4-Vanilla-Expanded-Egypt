@@ -6,5 +6,5 @@ tags={
 	"Gameplay"
 	"National Focuses"
 }
-name="Vanilla Egypt Expanded"
-supported_version="1.18.0.0"
+name="Vanilla Expanded - Egypt"
+supported_version="1.18.*"

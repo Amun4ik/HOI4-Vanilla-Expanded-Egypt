@@ -1,0 +1,3491 @@
+focus_tree = {
+    id = EGY_focus_tree
+
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = EGY
+        }
+    }
+
+    default = no
+    continuous_focus_position = { x = 55 y = 1900 }
+
+    focus = {
+        id = EGY_quostatus
+        icon = GFX_goal_EGY_flag
+        x = 0
+        y = 0
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_revolution }
+
+		completion_reward = {
+		}
+
+    }
+
+    focus = {
+        id = EGY_sultanat
+        icon = GFX_goal_EGY_monarchy
+        x = -12
+        y = 2
+        relative_position_id = EGY_quostatus
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_quostatus }
+		mutually_exclusive = { focus = EGY_democracy focus = EGY_constitution }
+
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_democracy
+        icon = GFX_goal_EGY_wafd
+        x = 12
+        y = 2
+        relative_position_id = EGY_quostatus
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_quostatus }
+		mutually_exclusive = { focus = EGY_constitution focus = EGY_sultanat }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_constitution
+        icon = GFX_goal_EGY_Constitutional_Statism
+        x = 0
+        y = 2
+        relative_position_id = EGY_quostatus
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_quostatus }
+		mutually_exclusive = { focus = EGY_democracy focus = EGY_sultanat }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_republicanism
+        icon = GFX_goal_EGY_Nasserists
+        x = 6
+        y = 4
+        relative_position_id = EGY_democracy
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_democracy }
+		prerequisite = { focus = EGY_with_radicals }
+		mutually_exclusive = { focus = EGY_restoresultanat focus = EGY_return1931 focus = EGY_stayincourse }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_stayincourse
+        icon = GFX_goal_EGY_neu_old
+        x = 6
+        y = 4
+        relative_position_id = EGY_constitution
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_democracy focus = EGY_constitution }
+		prerequisite = { focus = EGY_wafd_compromise }
+		mutually_exclusive = { focus = EGY_restoresultanat focus = EGY_return1931 focus = EGY_republicanism }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_limitkingpower
+        icon = GFX_focus_rom_handle_king
+        x = 1
+        y = 1
+        relative_position_id = EGY_democracy
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_democracy }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_democraticelections
+        icon = GFX_focus_generic_election
+        x = -1
+        y = 1
+        relative_position_id = EGY_democracy
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_democracy }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_fightbritishinfluence
+        icon = GFX_focus_ARG_cut_ties_with_britain
+        x = 1
+        y = 1
+        relative_position_id = EGY_limitkingpower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_limitkingpower }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_consolidatepower
+        icon = GFX_goal_EGY_Father_of_the_Nation
+        x = -1
+        y = 1
+        relative_position_id = EGY_limitkingpower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_limitkingpower }
+		prerequisite = { focus = EGY_democraticelections }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_strong_parliament
+        icon = GFX_focus_ETH_re-convene_the_parliament
+        x = -3
+        y = 1
+        relative_position_id = EGY_limitkingpower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_democraticelections }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_wafd_compromise
+        icon = GFX_focus_GER_monarchy_compromise
+        x = -1
+        y = 1
+        relative_position_id = EGY_consolidatepower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_consolidatepower }
+		prerequisite = { focus = EGY_strong_parliament }
+		mutually_exclusive = { focus = EGY_with_radicals }
+
+		completion_reward = {
+		}
+
+    }
+
+    focus = {
+        id = EGY_with_radicals
+        icon = GFX_focus_ARG_defense_and_democracy
+        x = 1
+        y = 1
+        relative_position_id = EGY_consolidatepower
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_consolidatepower }
+		prerequisite = { focus = EGY_fightbritishinfluence }
+		mutually_exclusive = { focus = EGY_wafd_compromise }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_wafd8
+        icon = generic
+        x = 0
+        y = 3
+        relative_position_id = EGY_wafd_compromise
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_wafd_compromise }
+		prerequisite = { focus = EGY_wafd9 }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_wafd9
+        icon = generic
+        x = 0
+        y = 1
+        relative_position_id = EGY_stayincourse
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_stayincourse }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_return1931
+        icon = GFX_goal_EGY_Royal_House
+        x = -6
+        y = 4
+        relative_position_id = EGY_constitution
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_sultanat focus = EGY_constitution }
+		mutually_exclusive = { focus = EGY_restoresultanat focus = EGY_stayincourse focus = EGY_republicanism }
+
+		completion_reward = {
+		}
+
+    }
+	
+	
+    focus = {
+        id = EGY_restoresultanat
+        icon = GFX_goal_EGY_khedive
+        x = -6
+        y = 4
+        relative_position_id = EGY_sultanat
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_sultanat }
+		mutually_exclusive = { focus = EGY_return1931 focus = EGY_stayincourse focus = EGY_republicanism }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_commonwealth
+        icon = GFX_focus_eng_the_sun_never_sets
+        x = 6
+        y = 4
+        relative_position_id = EGY_return1931
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_stayincourse focus = EGY_return1931 }
+		mutually_exclusive = { focus = EGY_help_from_axis focus = EGY_independent focus = EGY_warforindependency focus = EGY_allywithturkey }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_help_from_axis
+        icon = GFX_focus_chi_mission_to_germany
+        x = -6
+        y = 4
+        relative_position_id = EGY_return1931
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_return1931 focus = EGY_restoresultanat }
+		mutually_exclusive = { focus = EGY_commonwealth focus = EGY_independent focus = EGY_warforindependency focus = EGY_allywithturkey }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_independent
+        icon = GFX_goal_EGY_economic_independence
+        x = 6
+        y = 4
+        relative_position_id = EGY_stayincourse
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_republicanism focus = EGY_stayincourse }
+		mutually_exclusive = { focus = EGY_commonwealth focus = EGY_help_from_axis focus = EGY_warforindependency focus = EGY_allywithturkey }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_warforindependency
+        icon = GFX_focus_attack_britain
+        x = 6
+        y = 4
+        relative_position_id = EGY_republicanism
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_republicanism }
+		mutually_exclusive = { focus = EGY_commonwealth focus = EGY_help_from_axis focus = EGY_independent focus = EGY_allywithturkey }
+
+		completion_reward = {
+		}
+
+    }
+	
+    focus = {
+        id = EGY_allywithturkey
+        icon = GFX_focus_generic_befriend_turkey
+        x = -6
+        y = 4
+        relative_position_id = EGY_restoresultanat
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        prerequisite = { focus = EGY_restoresultanat }
+		mutually_exclusive = { focus = EGY_commonwealth focus = EGY_help_from_axis focus = EGY_independent focus = EGY_warforindependency }
+
+		completion_reward = {
+		}
+
+    }
+###################################################################################################################################################################################################################
+ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА ТЕРРИТОРИЯ СИДОРА 
+###################################################################################################################################################################################################################
+	focus = {
+        id = EGY_revolution
+        icon = GFX_goal_EGY_revolt_against_the_opressors
+        x = 50
+        y = 0
+        cost = 10
+		relative_position_id = EGY_quostatus
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_quostatus }
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = EGY_quostatus
+				}
+			}
+		}
+		
+		offset = {
+			x = -20
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_revolution
+			}
+		}
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_arabicsocialism
+				has_completed_focus = EGY_bratyamusulmane
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+    }
+
+    focus = {
+        id = EGY_arabicsocialism
+        icon = GFX_goal_EGY_com
+        x = -12
+        y = 2
+        relative_position_id = EGY_revolution
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_bratyamusulmane }
+        prerequisite = { focus = EGY_revolution }
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = EGY_bratyamusulmane
+					has_completed_focus = EGY_quostatus
+				}
+			}
+		}
+		
+		offset = {
+			x = 8
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_arabicsocialism
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+    }
+
+    focus = {
+        id = EGY_bratyamusulmane
+        icon = GFX_goal_EGY_Guidance_Under_Allah
+        x = 12
+        y = 2
+        relative_position_id = EGY_revolution
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_arabicsocialism }
+        prerequisite = { focus = EGY_revolution }
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = EGY_arabicsocialism
+					has_completed_focus = EGY_quostatus
+				}
+			}
+		}
+		
+		offset = {
+			x = -8
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_bratyamusulmane
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+    }
+
+    focus = {
+        id = EGY_collectvolunteers
+        icon = GFX_focus_ITA_generic_fascist_workers
+        x = 0
+        y = 1
+        relative_position_id = EGY_bratyamusulmane
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+
+        prerequisite = { focus = EGY_bratyamusulmane }
+
+    }
+
+    focus = {
+        id = EGY_opolchenie
+        icon = GFX_focus_generic_spur_communist_revolutions
+        x = 0
+        y = 1
+        relative_position_id = EGY_arabicsocialism
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+
+        prerequisite = { focus = EGY_arabicsocialism }
+
+    }
+	
+	focus = {
+        id = EGY_international_brigad
+        icon = GFX_focus_spr_torchbearers_of_tomorrow
+        x = -2
+        y = 1
+        relative_position_id = EGY_arabicsocialism
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+
+        prerequisite = { focus = EGY_arabicsocialism }
+
+    }
+	
+	focus = {
+        id = EGY_udar_po_levym
+        icon = GFX_focus_SWE_neither_death_nor_dishonor
+        x = -4
+        y = 1
+        relative_position_id = EGY_bratyamusulmane
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_compromis focus = EGY_udar_po_pravym }
+        prerequisite = { focus = EGY_bratyamusulmane }
+
+    }
+	
+	focus = {
+        id = EGY_udar_po_pravym
+        icon = GFX_focus_PER_state_atheism
+        x = 4
+        y = 1
+        relative_position_id = EGY_arabicsocialism
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_compromis focus = EGY_udar_po_levym }
+        prerequisite = { focus = EGY_arabicsocialism }
+
+    }
+	
+	focus = {
+        id = EGY_compromis
+        icon = GFX_goal_generic_major_alliance
+        x = 0
+        y = 3
+        relative_position_id = EGY_revolution
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_udar_po_pravym focus = EGY_udar_po_levym }
+        prerequisite = { focus = EGY_arabicsocialism focus = EGY_bratyamusulmane }
+
+		offset = {
+			x = 8
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_arabicsocialism
+			}
+		}
+		
+		offset = {
+			x = -8
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EGY_bratyamusulmane
+			}
+		}
+    }
+	
+	focus = {
+        id = EGY_obedinit_generalov
+        icon = GFX_focus_PER_march_to_nile
+        x = 2
+        y = 1
+        relative_position_id = EGY_bratyamusulmane
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_bratyamusulmane }
+
+    }
+     
+	focus = {
+        id = EGY_GER_eqveepment
+        icon = GFX_focus_chi_mission_to_germany
+        x = -2
+        y = 1
+        relative_position_id = EGY_bratyamusulmane
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_bratyamusulmane }
+
+    }
+	 
+	focus = {
+        id = EGY_Pytch
+        icon = GFX_focus_RAJ_a_private_military
+        x = 0
+        y = 1
+        relative_position_id = EGY_collectvolunteers
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_collectvolunteers }
+		prerequisite = { focus = EGY_GER_eqveepment }
+		prerequisite = { focus = EGY_obedinit_generalov }
+
+    }
+	 
+	 
+	focus = {
+        id = EGY_ITA_eqveepment
+        icon = GFX_focus_befriend_italy
+        x = -1
+        y = 1
+        relative_position_id = EGY_GER_eqveepment
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_GER_eqveepment }
+	}
+	focus = {
+        id = EGY_voenoe_polozhenie
+        icon = GFX_goal_generic_political_pressure
+        x = 1
+        y = 1
+        relative_position_id = EGY_obedinit_generalov
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_obedinit_generalov }
+	}
+	 
+	focus = {
+        id = EGY_molodye_oficery
+        icon = GFX_focus_AFG_defender_of_central_asia
+        x = 2
+        y = 1
+        relative_position_id = EGY_arabicsocialism
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_arabicsocialism }
+	}
+	
+    focus = {
+        id = EGY_SOV_eqveepment
+        icon = GFX_focus_chi_mission_to_the_soviet_union
+        x = 1
+        y = 1
+        relative_position_id = EGY_molodye_oficery
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+
+        prerequisite = { focus = EGY_molodye_oficery }
+
+    }
+	 
+	focus = {
+        id = EGY_zahvat_skladov
+        icon = GFX_focus_GER_liberate_exploited_colonial_workers
+        x = -1
+        y = 1
+        relative_position_id = EGY_international_brigad
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_international_brigad }
+	}
+	  
+	focus = {
+        id = EGY_vostanie
+        icon = GFX_focus_ITA_corpo_volontari_della_liberta
+        x = 0
+        y = 1
+        relative_position_id = EGY_opolchenie
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_molodye_oficery }
+		prerequisite = { focus = EGY_opolchenie }
+		prerequisite = { focus = EGY_international_brigad }
+	}
+	 
+	focus = {
+        id = EGY_soc_dem
+        icon = GFX_focus_PER_strengthen_the_tudeh
+        x = -4
+        y = 1
+        relative_position_id = EGY_vostanie
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_soc_panarabic focus = EGY_SOV_alienc }
+        prerequisite = { focus = EGY_vostanie }
+		
+	}
+	 
+	focus = {
+        id = EGY_soc_panarabic
+        icon = GFX_focus_AUS_danubian_socialist_communes
+        x = 0
+        y = 1
+        relative_position_id = EGY_vostanie
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_soc_dem focus = EGY_SOV_alienc }
+        prerequisite = { focus = EGY_vostanie }
+		
+	}
+	 
+	focus = {
+        id = EGY_SOV_alienc
+        icon = GFX_focus_NOR_moscows_education_centers
+        x = 4
+        y = 1
+        relative_position_id = EGY_vostanie
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_soc_dem focus = EGY_soc_panarabic }
+        prerequisite = { focus = EGY_vostanie }
+		
+	}
+	 
+	focus = {
+        id = EGY_Asix
+        icon = GFX_focus_GER_appease_the_wehrmacht
+        x = -4
+        y = 1
+        relative_position_id = EGY_Pytch
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_fasc_panarabic focus = EGY_fasc_king }
+        prerequisite = { focus = EGY_Pytch }
+	 
+	}
+	 
+    focus = {
+        id = EGY_fasc_panarabic
+        icon = GFX_goal_EGY_muslim_brotherhood
+        x = 0
+        y = 1
+        relative_position_id = EGY_Pytch
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_Asix focus = EGY_fasc_king }
+        prerequisite = { focus = EGY_Pytch }
+	 
+	}
+	 
+	focus = {
+        id = EGY_fasc_king
+        icon = GFX_focus_SWI_helvetic_junta
+        x = 4
+        y = 1
+        relative_position_id = EGY_Pytch
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_fasc_panarabic focus = EGY_Asix }
+        prerequisite = { focus = EGY_Pytch }
+		
+	}
+	 
+	focus = {
+        id = EGY_kabinet_ministrov
+        icon = GFX_focus_ETH_re-convene_the_parliament
+        x = 2
+        y = 1
+        relative_position_id = EGY_fasc_panarabic
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+     
+        prerequisite = { focus = EGY_fasc_panarabic focus = EGY_fasc_king }
+	}
+	 
+    focus = {
+        id = EGY_nats_voz
+        icon = GFX_focus_generic_fascist_propaganda
+        x = 0
+        y = 1
+        relative_position_id = EGY_fasc_panarabic
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+     
+        prerequisite = { focus = EGY_fasc_panarabic }
+	}
+     
+    focus = {
+        id = EGY_SS_free_arabian 
+        icon = GFX_focus_GER_new_reforms_in_the_wehrmacht
+        x = 2
+        y = 1
+        relative_position_id = EGY_Asix
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+     
+        prerequisite = { focus = EGY_Asix }
+	}
+	 
+    focus = {
+        id = EGY_italia_investory
+        icon = GFX_focus_ITA_italian_irredentism
+        x = 0
+        y = 1
+        relative_position_id = EGY_Asix
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+     
+        prerequisite = { focus = EGY_Asix }
+	}
+	 
+    focus = {
+        id = EGY_germani_investory 
+        icon = GFX_focus_GER_realpolitik
+        x = -4
+        y = 1
+        relative_position_id = EGY_Asix
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+     
+        prerequisite = { focus = EGY_Asix }
+	}
+	 
+    focus = { 
+        id = EGY_alt_nationalizesuez
+        icon = GFX_focus_attack_britain
+        x = -1
+        y = 2
+		relative_position_id = EGY_compromis
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+     
+        prerequisite = { focus = EGY_Pytch focus = EGY_vostanie }
+	}
+	 
+    focus = {
+        id = EGY_vassal_ita
+        icon = GFX_focus_ITA_italian_hegemony
+        x = 0
+        y = 1
+        relative_position_id = EGY_italia_investory
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_vassal_ger }
+        prerequisite = { focus = EGY_italia_investory }
+	}
+	 
+    focus = {
+        id = EGY_vassal_ger
+        icon = GFX_focus_GER_propaganda_master
+        x = 0
+        y = 1
+        relative_position_id = EGY_germani_investory 
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_vassal_ita }
+        prerequisite = { focus = EGY_germani_investory }
+	}
+	 
+	focus = {
+        id = EGY_pritenzii
+        icon = GFX_focus_IRQ_unite_mashriq
+        x = 2
+        y = 1
+        relative_position_id = EGY_vassal_ger
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_vassal_ger focus = EGY_vassal_ita }
+	}
+	 
+	focus = {
+        id = EGY_Ministerstvo_ita_africa
+        icon = GFX_focus_ITA_ministry_of_italian_africa
+        x = 0
+        y = 1
+        relative_position_id = EGY_vassal_ita
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_vassal_ita }
+	}
+	 
+	focus = {
+        id = EGY_arii_teori
+        icon = GFX_focus_PER_embrace_opulence
+        x = 0
+        y = 1
+        relative_position_id = EGY_vassal_ger
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_vassal_ger }
+	}
+	 
+	focus = {
+        id = EGY_Novaya_model_econoci
+        icon = GFX_focus_mex_privatisation
+        x = -2
+        y = 1
+        relative_position_id = EGY_Asix
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_Asix }
+	}
+	 
+	focus = {
+        id = EGY_ita_liviya
+        icon = GFX_focus_generic_develop_libya
+        x = 1
+        y = 1
+        relative_position_id = EGY_Ministerstvo_ita_africa
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_Ministerstvo_ita_africa }
+	}
+	 
+	focus = {
+        id = EGY_ita_neft
+        icon = GFX_focus_PER_increase_oil_sales
+        x = -1
+        y = 1
+        relative_position_id = EGY_Ministerstvo_ita_africa
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_Ministerstvo_ita_africa }
+	}
+	 
+	focus = {
+        id = EGY_ita_verf
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = -3
+        y = 1
+        relative_position_id = EGY_Ministerstvo_ita_africa
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_Ministerstvo_ita_africa }
+	}
+	 
+	focus = {
+        id = EGY_ita_unia
+        icon = GFX_focus_ITA_the_new_emperor_of_ethiopia
+        x = 0
+        y = 2
+        relative_position_id = EGY_Ministerstvo_ita_africa
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_Ministerstvo_ita_africa }
+		prerequisite = { focus = EGY_ita_liviya }
+	}
+	 
+	focus = {
+        id = EGY_ita_aircraft
+        icon = GFX_focus_BRA_italian_aircraft_development
+        x = -2
+        y = 2
+        relative_position_id = EGY_Ministerstvo_ita_africa
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_Ministerstvo_ita_africa }
+		prerequisite = { focus = EGY_ita_liviya }
+		prerequisite = { focus = EGY_ita_neft }
+	}
+	 
+	focus = {
+        id = EGY_zhemchuzhina_ita
+        icon = GFX_focus_ITA_imperial_recognition
+        x = -1
+        y = 3
+        relative_position_id = EGY_Ministerstvo_ita_africa
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+        prerequisite = { focus = EGY_ita_aircraft }
+		prerequisite = { focus = EGY_ita_unia }
+		prerequisite = { focus = EGY_ita_neft }
+		prerequisite = { focus = EGY_ita_verf }
+	}
+	 
+	focus = {
+        id = EGY_linkor_italia
+        icon = GFX_focus_SWE_italian_destroyers
+        x = 0
+        y = 2
+        relative_position_id = EGY_ita_verf
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ita_verf }
+	}
+	 
+	focus = {
+        id = EGY_northern_french_africa
+        icon = GFX_focus_generic_attack_vichy_france
+        x = 0
+        y = 2
+        relative_position_id = EGY_ita_liviya
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ita_liviya }
+	}
+	 
+	focus = {
+        id = EGY_ger_tyazh_prom_1
+        icon = GFX_focus_NORDIC_com_materiel
+        x = -2
+        y = 1
+        relative_position_id = EGY_vassal_ger
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_vassal_ger }
+	}
+	 
+	focus = {
+        id = EGY_ger_legkiy_prom_1
+        icon = GFX_focus_NORDIC_com_civilian
+        x = -4
+        y = 1
+        relative_position_id = EGY_vassal_ger
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_vassal_ger }
+	}
+	 
+	focus = {
+        id = EGY_ger_tyazh_prom_2
+        icon = GFX_focus_NORDIC_com_selector_army
+        x = 1
+        y = 1
+        relative_position_id = EGY_ger_tyazh_prom_1
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_tyazh_prom_1 }
+	}
+	 
+	focus = {
+        id = EGY_ger_army
+        icon = GFX_focus_GER_hegemony_of_the_ss
+        x = 0
+        y = 2
+        relative_position_id = EGY_arii_teori
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_arii_teori }
+		prerequisite = { focus = EGY_ger_tyazh_prom_2 }
+	}
+	 
+	focus = {
+        id = EGY_ger_legkiy_prom_2
+        icon = GFX_focus_NORDIC_com_selector_civilian
+        x = -1
+        y = 1
+        relative_position_id = EGY_ger_legkiy_prom_1
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_legkiy_prom_1 }
+	}
+	 
+	focus = {
+        id = EGY_ger_neft
+        icon = GFX_focus_PER_donate_oil_fields
+        x = 1
+        y = 1
+        relative_position_id = EGY_ger_legkiy_prom_1
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_legkiy_prom_1 }
+		prerequisite = { focus = EGY_ger_tyazh_prom_1 }
+	}
+	 
+	focus = {
+        id = EGY_ger_colba
+        icon = GFX_focus_NORDIC_com_capstone_research
+        x = -6
+        y = 1
+        relative_position_id = EGY_vassal_ger
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_vassal_ger }
+	}
+	 
+	focus = {
+        id = EGY_tanks_ger
+        icon = GFX_focus_GER_adopt_new_panzer_doctrine_historical
+        x = 1
+        y = 1
+        relative_position_id = EGY_ger_neft
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_neft }
+		prerequisite = { focus = EGY_ger_tyazh_prom_2 }
+	}
+	 
+	focus = {
+        id = EGY_ger_aircraft
+        icon = GFX_focus_GER_sturzkampfbomber_historical
+        x = -1
+        y = 1
+        relative_position_id = EGY_ger_neft
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_neft }
+		prerequisite = { focus = EGY_ger_tyazh_prom_2 }
+	}
+	 
+	focus = {
+        id = EGY_ger_flot
+        icon = GFX_focus_GER_seeherrschaft
+        x = 0
+        y = 2
+        relative_position_id = EGY_ger_colba
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_neft }
+		prerequisite = { focus = EGY_ger_colba }
+		prerequisite = { focus = EGY_ger_legkiy_prom_2 }
+	 }
+	
+	focus = {
+        id = EGY_ger_privyshe_vsego
+        icon = GFX_focus_GER_the_four_year_plan
+        x = 0
+        y = 2
+        relative_position_id = EGY_tanks_ger
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_tanks_ger }
+		prerequisite = { focus = EGY_ger_aircraft}
+		prerequisite = { focus = EGY_ger_army }
+		prerequisite = { focus = EGY_ger_avtarcia }
+	  }
+	  
+	focus = {
+        id = EGY_ger_avtarcia
+        icon = GFX_focus_GER_autarky_achieved
+        x = 0
+        y = 2
+        relative_position_id = EGY_ger_legkiy_prom_2
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_legkiy_prom_2}
+		prerequisite = { focus = EGY_ger_neft}
+	}
+	  
+	focus = {
+        id = EGY_reihkom_arabia
+        icon = GFX_focus_ger_reichskommisariats_historical
+        x = 0
+        y = 2
+        relative_position_id = EGY_ger_army
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_tanks_ger }
+		prerequisite = { focus = EGY_ger_aircraft}
+		prerequisite = { focus = EGY_ger_army }
+	  }
+	  
+    focus = {
+        id = EGY_ita_gegemon
+        icon = GFX_focus_ITA_subdue_the_sentinels
+        x = 0
+        y = 1
+        relative_position_id = EGY_zhemchuzhina_ita
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_northern_french_africa }
+		prerequisite = { focus = EGY_linkor_italia}
+		prerequisite = { focus = EGY_zhemchuzhina_ita }
+	}
+	  
+	focus = {
+        id = EGY_ger_tyazh_prom_3
+        icon = GFX_focus_generic_mass_production
+        x = 0
+        y = 2
+        relative_position_id = EGY_ger_tyazh_prom_2
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_tyazh_prom_2 }
+	}
+	 
+	focus = {
+        id = EGY_ger_neft_2
+        icon = GFX_focus_generic_improve_roads
+        x = 0
+        y = 2
+        relative_position_id = EGY_ger_neft
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_neft }
+	}
+	 
+	focus = {
+        id = EGY_ger_wunderwaffe
+        icon = GFX_focus_GER_wunderwaffe
+        x = 1
+        y = 1
+        relative_position_id = EGY_ger_privyshe_vsego
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ger_privyshe_vsego }
+		prerequisite = { focus = EGY_reihkom_arabia }
+	}
+	 
+	focus = {
+        id = EGY_alt_razvedka
+        icon = GFX_focus_SWI_embrace_rote_drei
+        x = 1
+        y = 2
+        relative_position_id = EGY_compromis
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_Pytch focus = EGY_vostanie  }
+	}
+	  
+	focus = {
+        id = EGY_zacup_ita_teh
+        icon = GFX_focus_SWE_lynx_armored_car
+        x = -2
+        y = 1
+        relative_position_id = EGY_nats_voz
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_nats_voz focus = EGY_italia_investory }
+	}
+	  
+	focus = {
+        id = EGY_islam_cult
+        icon = GFX_focus_TUR_turanist_ambition
+        x = 0
+        y = 1
+        relative_position_id = EGY_nats_voz
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_nats_voz }
+	}
+	  
+	focus = {
+        id = EGY_ucrepit_vlast
+        icon = GFX_focus_AFG_parliamentary_democracy
+        x = 2
+        y = 1
+        relative_position_id = EGY_nats_voz
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_nats_voz focus = EGY_cult_of_kings }  
+		prerequisite = { focus = EGY_kabinet_ministrov }
+	}
+	  
+	focus = {
+        id = EGY_perevoryzhenie
+        icon = GFX_focus_AFG_against_kabul
+        x = -1
+        y = 1
+        relative_position_id = EGY_islam_cult
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_ucrepit_vlast }
+		prerequisite = { focus = EGY_islam_cult }
+		prerequisite = { focus = EGY_zacup_ita_teh }
+	}
+
+	focus = {
+        id = EGY_cult_of_kings
+        icon = GFX_focus_AFG_retire_the_uncles
+        x = 0
+        y = 1
+        relative_position_id = EGY_fasc_king
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_fasc_king }
+	}
+
+	focus = {
+        id = EGY_odyn_narod_odna_strana_odyn_vozhdy
+        icon = GFX_focus_generic_military_dictatorship
+        x = 1
+        y = 1
+        relative_position_id = EGY_islam_cult
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        
+		prerequisite = { focus = EGY_islam_cult }
+		prerequisite = { focus = EGY_ucrepit_vlast }
+	}
+	
+	focus = {
+        id = EGY_king_maryonetka
+        icon = GFX_focus_generic_subjugation
+        x = -2
+        y = 1
+        relative_position_id = EGY_odyn_narod_odna_strana_odyn_vozhdy
+        cost = 10
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_the_new_repyblica }
+		prerequisite = { focus = EGY_odyn_narod_odna_strana_odyn_vozhdy }
+		prerequisite = { focus = EGY_perevoryzhenie }
+	}
+	
+	focus = {
+        id = EGY_the_new_repyblica
+        icon = GFX_focus_PER_middle_east_protectorate
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_odyn_narod_odna_strana_odyn_vozhdy
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_king_maryonetka }
+		prerequisite = { focus = EGY_odyn_narod_odna_strana_odyn_vozhdy }
+	}
+
+	focus = {
+        id = EGY_ital_model_economic
+        icon = GFX_focus_generic_public_works
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_new_repyblica
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
+	}
+
+	focus = {
+        id = EGY_king_ukaz
+        icon = GFX_focus_PER_communist_afghanistan_intervention
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_king_maryonetka
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_king_maryonetka }
+	}
+
+	focus = {
+        id = EGY_antifa_king_zagovor
+        icon = GFX_focus_generic_conspiracy
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_king_ukaz
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_king_ukaz }
+	}
+	
+	focus = {
+        id = EGY_nats_revolution
+        icon = GFX_focus_ARG_banco_central_de_la_republica_argentina
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_new_repyblica
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_the_new_repyblica }
+	}
+
+	focus = {
+        id = EGY_idel_obrobotka_raboch
+        icon = GFX_focus_AFG_promote_the_counter_elite
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_nats_revolution
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_nats_revolution }
+		prerequisite = { focus = EGY_ital_model_economic }
+	}
+	
+	focus = {
+        id = EGY_voenaya_propoganda
+        icon = GFX_goal_generic_axis_build_infantry
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_ital_model_economic
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_ital_model_economic }
+	}
+	
+	focus = {
+        id = EGY_tyazh_prom_war
+        icon = GFX_goal_generic_construct_mil_factory
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_ital_model_economic
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_ital_model_economic }
+	}
+	
+	focus = {
+        id = EGY_podnyat_orydia
+        icon = GFX_focus_FIN_coastal_defense
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_voenaya_propoganda
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_voenaya_propoganda }
+		prerequisite = { focus = EGY_tyazh_prom_war }
+	}
+	
+	focus = {
+        id = EGY_fasc_war_world
+        icon = GFX_focus_generic_jungle_training
+        x = -1
+        y = 2
+		cost = 10
+        relative_position_id = EGY_voenaya_propoganda
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_totaler_krieg }
+		prerequisite = { focus = EGY_podnyat_orydia }
+	}
+	
+	focus = {
+        id = EGY_totaler_krieg
+        icon = GFX_focus_ITA_moschettieri_del_duce
+        x = -1
+        y = 2
+		cost = 10
+        relative_position_id = EGY_idel_obrobotka_raboch
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_fasc_war_world focus = EGY_podgotovit_allienc }
+		prerequisite = { focus = EGY_podnyat_orydia }
+		prerequisite = { focus = EGY_idel_obrobotka_raboch }
+	}
+	
+	focus = {
+        id = EGY_fasc_war_ita
+        icon = GFX_focus_ETH_the_second_italo_ethiopian_war
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_war_world
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_war_world focus = EGY_totaler_krieg}
+	}
+	
+	focus = {
+        id = EGY_fasc_war_uk
+        icon = GFX_focus_AST_never_gallipoli
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_war_world
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_war_world focus = EGY_totaler_krieg}
+	}
+	
+    focus = {
+        id = EGY_fasc_war_fra
+        icon = GFX_focus_generic_attack_lebanon
+        x = -3
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_war_world
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_war_world focus = EGY_totaler_krieg}
+	}
+	
+	focus = {
+        id = EGY_fasc_war_irq
+        icon = GFX_focus_IRQ_arab_dominance
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_totaler_krieg
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
+	}
+	
+	focus = {
+        id = EGY_fasc_war_soud
+        icon = GFX_focus_NOR_send_the_king_back_to_denmark
+        x = 3
+        y = 1
+		cost = 10
+        relative_position_id = EGY_totaler_krieg
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
+	}
+	
+	focus = {
+        id = EGY_fasc_war_spain
+        icon = GFX_focus_ETH_the_rif
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_war_fra
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_war_fra }
+    }
+	
+	focus = {
+        id = EGY_unaitet_arabia
+        icon = GFX_focus_IRQ_IRQ_demand_syria_hashemite
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_war_uk
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_war_fra }
+		prerequisite = { focus = EGY_fasc_war_uk }
+		prerequisite = { focus = EGY_fasc_war_ita }
+	}
+	
+	focus = {
+        id = EGY_fasc_war_tur
+        icon = GFX_focus_TUR_purge_the_kemalists
+        x = 2
+        y = 4
+		cost = 10
+        relative_position_id = EGY_totaler_krieg
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
+	}
+	
+	focus = {
+        id = EGY_fasc_war_ira
+        icon = GFX_focus_generic_attack_iran
+        x = 0
+        y = 4
+		cost = 10
+        relative_position_id = EGY_totaler_krieg
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_totaler_krieg focus = EGY_podgotovit_allienc }
+	}
+	
+	focus = {
+        id = EGY_prom_alzh
+        icon = GFX_focus_generic_africa_infrastructure
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_unaitet_arabia
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_unaitet_arabia }
+	}
+	
+	focus = {
+        id = EGY_prom_sud
+        icon = GFX_focus_BEL_dam_the_consequences
+        x = 2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_unaitet_arabia
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_unaitet_arabia }
+	}
+	
+	focus = {
+        id = EGY_prom_liviya
+        icon = GFX_focus_generic_resource_extraction
+        x = -2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_unaitet_arabia
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_unaitet_arabia }
+	}
+	
+	focus = {
+        id = EGY_prom_maroco
+        icon = GFX_focus_generic_low_cost_housing
+        x = -4
+        y = 1
+		cost = 10
+        relative_position_id = EGY_unaitet_arabia
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_unaitet_arabia }
+	}
+	
+	focus = {
+        id = EGY_prom_irq
+        icon = GFX_focus_generic_land_reclamation
+        x = 4
+        y = 1
+		cost = 10
+        relative_position_id = EGY_unaitet_arabia
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_unaitet_arabia }
+		prerequisite = { focus = EGY_fasc_war_irq }
+	}
+	
+	focus = {
+        id = EGY_prom_soud
+        icon = GFX_focus_PER_increase_oil_sales
+        x = 6
+        y = 1
+		cost = 10
+        relative_position_id = EGY_unaitet_arabia
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_unaitet_arabia }
+		prerequisite = { focus = EGY_fasc_war_soud }
+	}
+	
+	focus = {
+        id = EGY_sobrat_majahed
+        icon = GFX_focus_AFG_shadows_of_the_king
+        x = -7
+        y = 1
+		cost = 10
+        relative_position_id = EGY_podnyat_orydia
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_podnyat_orydia }
+	}
+	
+	focus = {
+        id = EGY_jihad
+        icon = GFX_focus_AFG_savior_of_the_holy_lands
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_sobrat_majahed
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_sobrat_majahed }
+		prerequisite = { focus = EGY_fasc_war_world focus = EGY_totaler_krieg}
+	}
+	
+	focus = {
+        id = EGY_ucrepit_very
+        icon = GFX_focus_PER_islamic_solidarity
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_jihad
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_jihad }
+	}
+	
+	focus = {
+        id = EGY_rasprostranenie
+        icon = GFX_focus_generic_islamic_propaganda
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_jihad
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_jihad }
+	}
+	
+	focus = {
+        id = EGY_rakety
+        icon = GFX_focus_rocketry
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_war_ira
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_war_ira }
+		prerequisite = { focus = EGY_fasc_war_tur }
+	}
+	
+	focus = {
+        id = EGY_fasc_yaderka
+        icon = GFX_focus_generic_nuclear_development
+        x = 0
+        y = 4
+		cost = 10
+        relative_position_id = EGY_jihad
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_jihad }
+		prerequisite = { focus = EGY_fasc_war_ira }
+	}
+	
+	focus = {
+        id = EGY_nats_prov_scicili
+        icon = GFX_focus_generic_spread_fascism
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_war_ita
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_war_ita }
+	}
+	
+	focus = {
+        id = EGY_nats_prov_iberia
+        icon = GFX_focus_por_iberian_summit
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_fasc_war_spain
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_war_spain }
+	}
+
+	focus = {
+        id = EGY_ecomic_gegemon
+        icon = GFX_focus_IRQ_rally_the_arab_world
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_prom_alzh
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_prom_alzh }
+		prerequisite = { focus = EGY_prom_sud }
+		prerequisite = { focus = EGY_prom_liviya }
+		prerequisite = { focus = EGY_prom_maroco }
+		
+	}
+	
+	focus = {
+        id = EGY_world_gegemon_arabia
+        icon = GFX_focus_IRQ_arab_free_legion
+        x = 0
+        y = 3
+		cost = 10
+        relative_position_id = EGY_ecomic_gegemon
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_war_spain }
+		prerequisite = { focus = EGY_fasc_yaderka focus = EGY_rakety }
+	}
+	
+	focus = {
+        id = EGY_royal_to_pawer
+        icon = GFX_focus_rom_royal_dictatorship
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_cult_of_kings
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_cult_of_kings }
+		
+	}
+	
+	focus = {
+        id = EGY_zachistka_sredi_voenyh
+        icon = GFX_goal_generic_political_pressure
+        x = 3
+        y = 1
+		cost = 10
+        relative_position_id = EGY_cult_of_kings
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_cult_of_kings }
+		prerequisite = { focus = EGY_zastavit_narod_byt_loyalnym }
+	}
+	
+	focus = {
+        id = EGY_raskoshnaya_zhizn
+        icon = GFX_focus_rom_parties_end
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_royal_to_pawer
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_royal_to_pawer }
+		prerequisite = { focus = EGY_ucrepit_vlast }
+	}
+	
+	focus = {
+        id = EGY_zastavit_narod_byt_loyalnym
+        icon = GFX_focus_CZE_german_puppet
+        x = 2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_king
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_king }
+		
+	}
+	
+	focus = {
+        id = EGY_lozhnyi_parlament
+        icon = GFX_focus_ARG_keep_it_in_the_party
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_zachistka_sredi_voenyh
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_zachistka_sredi_voenyh}
+		prerequisite = { focus = EGY_royal_to_pawer}
+		
+	}
+	
+	focus = {
+        id = EGY_cho_toe_konstitycia
+        icon = GFX_focus_BRA_repeale_national_security_law
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_royal_to_pawer
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_royal_to_pawer}
+		
+	}
+	
+	focus = {
+        id = EGY_the_name_of_king
+        icon = GFX_focus_SOV_zemsky_sobor
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_cho_toe_konstitycia
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_cho_toe_konstitycia}
+		prerequisite = { focus = EGY_lozhnyi_parlament}
+		prerequisite = { focus = EGY_raskoshnaya_zhizn}
+		
+	}
+	
+	focus = {
+        id = EGY_pole_experementov
+        icon = GFX_goal_generic_secret_weapon
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_raskoshnaya_zhizn
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_raskoshnaya_zhizn}
+		
+	}
+	
+	focus = {
+        id = EGY_allienc_ger
+        icon = GFX_focus_GER_reorganize_the_wehrmacht
+        x = -2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_name_of_king
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+	    mutually_exclusive = { focus = EGY_afc_allienc focus = EGY_svoi_allienc focus = EGY_allienc_ita }
+	    prerequisite = { focus = EGY_the_name_of_king focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
+	}
+	
+	focus = {
+        id = EGY_allienc_ita
+        icon = GFX_focus_BRA_joint_italian_motor_development
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_name_of_king
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+	    mutually_exclusive = { focus = EGY_afc_allienc focus = EGY_svoi_allienc focus = EGY_allienc_ger }
+	    prerequisite = { focus = EGY_the_name_of_king focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
+	}
+	
+	focus = {
+        id = EGY_svoi_allienc
+        icon = GFX_goal_anschluss
+        x = 2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_name_of_king
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+	    mutually_exclusive = { focus = EGY_afc_allienc focus = EGY_allienc_ita focus = EGY_allienc_ger }
+	    prerequisite = { focus = EGY_the_name_of_king focus = EGY_the_new_repyblica focus = EGY_king_maryonetka }
+	}
+	
+	focus = {
+        id = EGY_afc_allienc
+        icon = GFX_focus_spr_masters_of_our_own_fate
+        x = 5
+        y = 1
+		cost = 10
+        relative_position_id = EGY_the_name_of_king
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+	    mutually_exclusive = { focus = EGY_svoi_allienc focus = EGY_allienc_ita focus = EGY_allienc_ger }
+	    prerequisite = { focus = EGY_the_name_of_king }
+	}
+	
+	focus = {
+        id = EGY_army_allienc
+        icon = GFX_focus_RAJ_lions_of_the_great_war
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_allienc_ger
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+
+	    prerequisite = { focus = EGY_allienc_ita focus = EGY_allienc_ger }
+	}
+	
+	focus = {
+        id = EGY_axis_podlodki
+        icon = GFX_goal_generic_wolf_pack
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_allienc_ger
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+
+	    prerequisite = { focus = EGY_allienc_ger }
+	}
+	
+	focus = {
+        id = EGY_allienc_ita_esminec
+        icon = GFX_focus_generic_destroyer
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_allienc_ita
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+
+	    prerequisite = { focus = EGY_allienc_ita }
+	}
+	
+	focus = {
+        id = EGY_podgotovit_allienc
+        icon = GFX_focus_AFG_scavenging 
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_axis_podlodki
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+        mutually_exclusive = { focus = EGY_totaler_krieg }
+	    prerequisite = { focus = EGY_army_allienc focus = EGY_allienc_tur }
+	
+		prerequisite = { focus = EGY_podnyat_orydia }
+		
+	}
+	
+	focus = {
+        id = EGY_allienc_soud
+        icon = GFX_focus_IRQ_a_new_caliph
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_svoi_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_svoi_allienc }
+		
+	}
+	
+	focus = {
+        id = EGY_allienc_irq
+        icon = GFX_focus_IRQ_party_of_national_brotherhood
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_svoi_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_svoi_allienc }
+		
+	}
+	
+	focus = {
+        id = EGY_allienc_tur
+        icon = GFX_focus_generic_befriend_turkey
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_svoi_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_allienc_irq focus = EGY_allienc_soud }
+	}
+	
+	focus = {
+        id = EGY_allienc_ira
+        icon = GFX_focus_PER_elevate_the_iran_party
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_allienc_tur
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_allienc_tur }
+	}
+	
+	focus = {
+        id = EGY_allienc_eph
+        icon = GFX_focus_ETH_the_king_of_kings
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_allienc_tur
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_allienc_tur }
+	}
+	
+	focus = {
+        id = EGY_allienc_Uk
+        icon = GFX_focus_eng_motion_of_no_confidence
+        x = 1
+        y = 2
+		cost = 10
+        relative_position_id = EGY_afc_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_fasc_king_neitralitet }
+	    prerequisite = { focus = EGY_afc_allienc }
+	}
+	
+	focus = {
+        id = EGY_fasc_king_neitralitet
+        icon = GFX_focus_SWE_refuge_from_war
+        x = -1
+        y = 2
+		cost = 10
+        relative_position_id = EGY_afc_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_allienc_Uk }
+	    prerequisite = { focus = EGY_afc_allienc }
+	}
+	
+	focus = {
+        id = EGY_bucker_gitlera
+        icon = GFX_goal_generic_fortify_city
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_afc_allienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_afc_allienc }
+	}
+	
+	focus = {
+        id = EGY_fasc_vostanovlenie
+        icon = GFX_focus_generic_concessions
+        x = 11
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_king
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_fasc_king focus = EGY_fasc_panarabic }
+	}
+	
+	focus = {
+        id = EGY_povysit_nalog
+        icon = GFX_focus_hol_abandon_the_gold_standard
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_ponizit_nalog }
+	    prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_ponizit_nalog
+        icon = GFX_focus_ITA_devaluate_the_lire
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_povysit_nalog }
+	    prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_ozivit_SH
+        icon = GFX_focus_ITA_workers_unions
+        x = -3
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_import_SH
+        icon = GFX_focus_generic_agricultural_subsidies
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_ozivit_SH
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_ozivit_SH }
+	}
+	
+	focus = {
+        id = EGY_legk_prom
+        icon = GFX_focus_CHL_enlarge_the_textile_industries
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_ponizit_nalog
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_ozivit_SH }
+		prerequisite = { focus = EGY_ponizit_nalog focus = EGY_povysit_nalog }
+	}
+	
+	focus = {
+        id = EGY_tyazh_prom
+        icon = GFX_focus_ICE_state_corporatism
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_povysit_nalog
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_ponizit_nalog focus = EGY_povysit_nalog }
+	}
+	
+	focus = {
+        id = EGY_zacut_prom_teh
+        icon = GFX_focus_generic_american_investments
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_povysit_nalog
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_ponizit_nalog focus = EGY_povysit_nalog }
+	}
+	
+	focus = {
+        id = EGY_dumba_na_nille
+        icon = GFX_focus_IRQ_construct_the_kut_barrage
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_zacut_prom_teh
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_zacut_prom_teh focus = EGY_tyazh_prom focus = EGY_legk_prom }
+	}
+	
+	focus = {
+        id = EGY_dumba_v_sudane
+        icon = GFX_focus_hol_prepare_the_inundation_lines
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_zacut_prom_teh
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_zacut_prom_teh focus = EGY_tyazh_prom focus = EGY_legk_prom }
+	}
+	
+	focus = {
+        id = EGY_otcrytie_novuh_shaht
+        icon = GFX_focus_generic_steel
+        x = 3
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+	    prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_tyazh_prom2
+        icon = GFX_focus_GER_factories_for_resources
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_tyazh_prom
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_tyazh_prom }
+		prerequisite = { focus = EGY_otcrytie_novuh_shaht }
+	}
+	
+	focus = {
+        id = EGY_turiszm
+        icon = GFX_focus_RAJ_just_good_business
+        x = -5
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_vostanovlenie
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_vostanovlenie }
+	}
+	
+	focus = {
+        id = EGY_otkrit_suecz
+        icon = GFX_focus_generic_the_suez
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_import_SH
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_zakrit_suecz }
+		prerequisite = { focus = EGY_zacut_prom_teh focus = EGY_tyazh_prom focus = EGY_legk_prom }
+		prerequisite = { focus = EGY_import_SH }
+	}
+	
+	focus = {
+        id = EGY_zakrit_suecz
+        icon = GFX_focus_generic_mediterranean_sea_focus
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_import_SH
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_otkrit_suecz }
+		prerequisite = { focus = EGY_zacut_prom_teh focus = EGY_tyazh_prom focus = EGY_legk_prom }
+		prerequisite = { focus = EGY_import_SH }
+	}
+	
+	focus = {
+        id = EGY_black_gold
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_otcrytie_novuh_shaht
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_otcrytie_novuh_shaht }
+	}
+	
+	focus = {
+        id = EGY_port_i_verf
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_turiszm
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_turiszm }
+	}
+	
+	focus = {
+        id = EGY_king_monopolia_and_corporation
+        icon = GFX_focus_spa_the_spanish_miracle
+        x = -3
+        y = 1
+		cost = 10
+        relative_position_id = EGY_import_SH
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+	
+		prerequisite = { focus = EGY_import_SH }
+		prerequisite = { focus = EGY_lozhnyi_parlament }
+	}
+	
+	focus = {
+        id = EGY_eco_chudo
+        icon = GFX_goal_EGY_Profits_From_Corruption
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_zacut_prom_teh
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_otkrit_suecz }
+		prerequisite = { focus = EGY_tyazh_prom2 }
+		prerequisite = { focus = EGY_dumba_v_sudane focus = EGY_dumba_na_nille }
+	}
+	
+	focus = {
+        id = EGY_compromis_very
+        icon = GFX_focus_AFG_state_atheism
+        x = -2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_soc_panarabic
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_seculyarizacia focus = EGY_unictozhit_veru }
+		prerequisite = { focus = EGY_soc_panarabic focus = EGY_soc_dem focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_unictozhit_veru
+        icon = GFX_focus_generic_annex_country
+        x = 2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_soc_panarabic
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_seculyarizacia focus = EGY_compromis_very }
+		prerequisite = { focus = EGY_soc_panarabic focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_seculyarizacia
+        icon = GFX_focus_PER_university_of_isfahan
+        x = -2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_soc_dem
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_unictozhit_veru focus = EGY_compromis_very }
+		prerequisite = { focus = EGY_soc_panarabic focus = EGY_soc_dem }
+	}
+	
+	focus = {
+        id = EGY_arabsoc
+        icon = GFX_focus_BEL_the_grand_place
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_soc_panarabic
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_soc_panarabic }
+	}
+	
+	focus = {
+        id = EGY_novoe_provitelstvo
+        icon = GFX_focus_PER_national_museum
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_soc_dem
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_soc_dem }
+	}
+	
+	focus = {
+        id = EGY_sovetnici_SOV
+        icon = GFX_focus_ARG_centralize_power
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_SOV_alienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_center
+        icon = GFX_focus_fra_loyalty_stalin
+        x = 6
+        y = 1
+		cost = 10
+        relative_position_id = EGY_SOV_alienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_pravo focus = EGY_levo }
+		prerequisite = { focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_levo
+        icon = GFX_focus_fra_loyalty_trotzky
+        x = 4
+        y = 1
+		cost = 10
+        relative_position_id = EGY_SOV_alienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_pravo focus = EGY_center }
+		prerequisite = { focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_pravo
+        icon = GFX_focus_SOV_bukharinists
+        x = 8
+        y = 1
+		cost = 10
+        relative_position_id = EGY_SOV_alienc
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		mutually_exclusive = { focus = EGY_center focus = EGY_levo }
+		prerequisite = { focus = EGY_SOV_alienc }
+	}
+	
+	focus = {
+        id = EGY_loyalny_stalinu
+        icon = GFX_focus_SOV_stalins_cult_of_personality
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_center
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_center }
+	}
+	
+	focus = {
+        id = EGY_verny_mirovoi_revolt
+        icon = GFX_goal_support_fourth_int
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_levo
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_levo }
+	}
+	
+	focus = {
+        id = EGY_nashe_delo_pravoe
+        icon = GFX_goal_support_fascism
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_pravo
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_pravo }
+	}
+	
+	focus = {
+        id = EGY_fasc_army
+        icon = GFX_goal_EGY_organize_the_egyptian_resistance
+        x = 24
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_king
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_king focus = EGY_fasc_panarabic }
+	}
+	
+	focus = {
+        id = EGY_army_man
+        icon = GFX_goal_EGY_Palestine_Defence
+        x = -5
+        y = 1
+		cost = 10
+        relative_position_id = EGY_fasc_army
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_fasc_army }
+	}
+	
+	focus = {
+        id = EGY_peha_prom_skidka
+        icon = GFX_focus_AFG_mountain_training
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_army_man
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_army_man }
+	}
+	
+	focus = {
+        id = EGY_mashinki
+        icon = GFX_goal_EGY_Sudan_Integration
+        x = -2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_army_man
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_army_man }
+	}
+	
+	focus = {
+        id = EGY_lt_tanki
+        icon = GFX_goal_EGY_Operation_Abu
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_mashinki
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_mashinki }
+		prerequisite = { focus = EGY_black_gold }
+	}
+	
+	focus = {
+        id = EGY_tt_tanki
+        icon = GFX_focus_PER_modern_cataphract
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_lt_tanki
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_lt_tanki }
+		prerequisite = { focus = EGY_tyazh_prom2 }
+	}
+	
+	focus = {
+        id = EGY_arta_skidka1
+        icon = GFX_goal_generic_army_artillery2
+        x = 2
+        y = 1
+		cost = 10
+        relative_position_id = EGY_army_man
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_army_man }
+	}
+	
+	focus = {
+        id = EGY_skidka_na_doku1
+        icon = GFX_goal_generic_allies_build_infantry
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_peha_prom_skidka
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_peha_prom_skidka }
+	}
+	
+	focus = {
+        id = EGY_skidka_na_doku2
+        icon = GFX_goal_rhineland
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_skidka_na_doku1
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_skidka_na_doku1 }
+	}
+	
+	focus = {
+        id = EGY_skidka_na_proizvodstvo_art
+        icon = GFX_focus_SWE_let_fly_all_guns
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_peha_prom_skidka
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_peha_prom_skidka }
+		prerequisite = { focus = EGY_arta_skidka1 }
+	}
+		
+		focus = {
+        id = EGY_arta_skidka2
+        icon = GFX_goal_generic_army_artillery
+        x = 1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_arta_skidka1
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_arta_skidka1 }
+	}
+	
+		focus = {
+        id = EGY_dop_osnashenie
+        icon = GFX_focus_generic_radio_communication
+        x = -1
+        y = 1
+		cost = 10
+        relative_position_id = EGY_arta_skidka2
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_arta_skidka2 }
+		prerequisite = { focus = EGY_skidka_na_proizvodstvo_art }
+	}
+	
+		focus = {
+        id = EGY_voen_center
+        icon = GFX_goal_EGY_Army
+        x = 0
+        y = 1
+		cost = 10
+        relative_position_id = EGY_skidka_na_doku2
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_dop_osnashenie }
+		prerequisite = { focus = EGY_skidka_na_doku2 }
+		prerequisite = { focus = EGY_meh }
+	}
+		
+		focus = {
+        id = EGY_meh
+        icon = GFX_focus_generic_mechanized
+        x = 0
+        y = 2
+		cost = 10
+        relative_position_id = EGY_mashinki
+        available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        cancelable = yes
+        bypass_if_unavailable = no
+		
+		prerequisite = { focus = EGY_mashinki }
+	}
+	
+	

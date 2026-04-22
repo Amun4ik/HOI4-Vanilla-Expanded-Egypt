@@ -1,0 +1,36 @@
+EGY_engfriendshipup = {
+	# level 5 not relevant. Cannot go above.
+	custom_effect_tooltip = EGY_engfriendshipup
+	if = {
+		limit = { has_idea = EGY_engfriendship4 }
+		swap_ideas = {
+			remove_idea = EGY_engfriendship4
+			add_idea = EGY_engfriendship5
+		}
+	}
+	else_if = {
+		limit = { has_idea = EGY_engfriendship3 }
+		swap_ideas = {
+			remove_idea = EGY_engfriendship3
+			add_idea = EGY_engfriendship4
+		}
+	}
+	else_if = {
+		limit = { has_idea = EGY_engfriendship2 }
+		swap_ideas = {
+			remove_idea = EGY_engfriendship2
+			add_idea = EGY_engfriendship3
+		}
+	}
+	else_if = {
+		limit = { has_idea = EGY_engfriendship1 }
+		swap_ideas = {
+			remove_idea = EGY_engfriendship1
+			add_idea = EGY_engfriendship2
+		}		
+	}
+	else_if = {
+		limit = { NOT = { has_idea = EGY_engfriendship1 } }
+		add_ideas = EGY_engfriendship1
+	}
+}

@@ -1,0 +1,169 @@
+add_namespace = egypt
+
+country_event = {
+	id = egypt.1
+	title = egypt.1.t
+	desc = egypt.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = egypt.1.a	
+	}	
+}
+
+# фуад умирает
+country_event = {
+	id = egypt.2
+	title = egypt.2.t
+	desc = egypt.2.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = EGY
+		date > 1936.4.1
+		has_country_leader = {
+			character = EGY_Faud_i
+			ruling_only = yes 
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+            retire_character = EGY_Faud_i
+			add_country_leader_role = {
+				character =  EGY_Farouk_Muhammad_Ali
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = { EGY_hedonist EGY_underage_monarch }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = egypt.2.a
+		
+		effect_tooltip = {
+            retire_character = EGY_Faud_i
+			add_country_leader_role = {
+				character =  EGY_Farouk_Muhammad_Ali
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = { EGY_hedonist EGY_underage_monarch }
+				}
+			}
+		}
+	}	
+}
+
+#фарук взрослеет
+country_event = {
+	id = egypt.3
+	title = egypt.3.t
+	desc = egypt.3.d
+	picture = GFX_report_event_royal_visit
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = EGY
+		date > 1937.7.1
+		has_country_leader = {
+			character = EGY_Farouk_Muhammad_Ali
+			ruling_only = yes
+		}
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = egypt.3.a
+		remove_country_leader_trait = EGY_underage_monarch
+	}	
+}
+
+# фарук распускает правительство
+country_event = {
+	id = egypt.5
+	title = egypt.5.t
+	desc = egypt.5.d
+	picture = GFX_report_event_generic_funeral
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = egypt.2.a
+		add_stability = -0.1
+	}	
+}
+##### ивенты ветки лояльности
+
+# потребовать судан ивент для ВБ
+country_event = {
+	id = egypt.6
+	title = egypt.6.t
+	desc = egypt.6.d
+	picture = GFX_report_event_generic_funeral
+
+	is_triggered_only = yes
+	
+
+	option = {
+	    ai_chance = {
+			factor = 1
+			modifier = {
+			    is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+		name = egypt.6.a
+		EGY = {
+            country_event = { id = egypt.4 hours = 16 random_hours = 8 }
+		}
+		if = {
+			limit = {
+				ROOT = { owns_state = 1017 }
+			}
+		    SIA = {
+			    transfer_state = 1017
+            }
+		}
+		if = {
+			limit = {
+				ROOT = { owns_state = 1018 }
+			}
+	        SIA = {
+			    transfer_state = 1018
+            }
+		}
+	}
+	# Отказать
+	option = {
+	    ai_chance = {
+			factor = 1
+		}
+		name = egypt.6.b
+        custom_effect_tooltip = SIA_canleadtoborderwar
+		EGY = {
+            country_event = { id = egypt.5 hours = 16 random_hours = 8 }
+		}
+	}
+}

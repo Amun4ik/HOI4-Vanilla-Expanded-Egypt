@@ -1,0 +1,21 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			883 = { add_claim_by = EGY }
+			551 = { add_claim_by = EGY }
+			767 = { add_claim_by = EGY }
+			886 = { add_claim_by = EGY }
+			549 = { add_claim_by = EGY }
+			887 = { add_claim_by = EGY }
+			885 = { add_claim_by = EGY }
+			884 = { add_claim_by = EGY }
+			ENG = { 	
+				set_autonomy = {
+				target = EGY
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+		}
+	}
+}

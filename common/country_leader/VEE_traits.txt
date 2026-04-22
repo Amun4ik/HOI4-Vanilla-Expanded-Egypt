@@ -1,0 +1,52 @@
+leader_traits = {
+
+	EGY_underage_monarch = {
+		random = no
+		sprite = 13
+		political_advisor_cost_factor = 0.25
+		trade_laws_cost_factor = 0.25
+		mobilization_laws_cost_factor = 0.25
+		economy_cost_factor = 0.25
+	}
+	
+	EGY_hedonist = {
+		random = no
+		stability_factor = -0.1
+		consumer_goods_factor = 0.05
+	}
+	
+	EGY_conservativeking = {
+		random = no
+		stability_factor = 0.1
+		neutrality_drift = 0.02
+
+	}
+	
+	EGY_islamicteacher = {
+		random = no
+		research_speed_factor = 0.05
+		fascism_drift = 0.02
+		conscription_factor = 0.05
+
+	}
+	
+	EGY_anti_colonialist = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.1
+		political_power_factor = 0.05
+		communism_drift = 0.02
+		resistance_target = 0.1
+
+	}
+	
+	EGY_provisional_government = {
+		random = no
+		sprite = 13
+
+		political_power_factor = -0.15
+		stability_factor = -0.1
+
+	}
+}

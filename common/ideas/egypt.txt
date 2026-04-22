@@ -1,0 +1,239 @@
+ideas = {
+
+	country = {
+	
+	
+		EGY_old_fleet = {
+		
+			picture = AUS_naval_efficiency_idea
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+			    naval_doctrine_cost_factor = 0.25
+				experience_gain_navy_factor = -0.25
+				industrial_capacity_dockyard = -0.25
+			}
+		}
+		
+		EGY_old_air = {
+		
+			picture = generic_air_payment
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+			    air_doctrine_cost_factor = 0.25
+				experience_gain_air_factor = -0.25
+				air_mission_efficiency = -0.25
+			}
+		}
+		EGY_old_industry = {
+		
+			picture = POL_disjointed_industry
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				industrial_capacity_factory = -0.25
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.25
+			}
+		}
+		EGY_old_army = {
+		
+			picture = tur_disorganised_armed_forces
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				army_artillery_attack_factor = -0.25
+				army_armor_attack_factor = -0.25
+			}
+            research_bonus = {
+				armor = -0.25 
+				artillery = -0.25 
+		    }
+		}
+		EGY_old_army2 = {
+		
+			picture = idea_tur_disorganised_armed_forces
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				army_armor_attack_factor = -0.25
+			}
+            research_bonus = {
+				armor = -0.25 
+		    }
+		}
+
+		EGY_profitfromsuez = {
+		
+			picture = idea_tur_disorganised_armed_forces
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		EGY_engfriendship1 = {
+		
+			picture = idea_chi_hyper_inflation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_factor = 0.01
+				consumer_goods_factor = -0.01
+			}
+		}
+		EGY_engfriendship2 = {
+		
+			picture = idea_chi_hyper_inflation2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_factor = 0.03
+				consumer_goods_factor = -0.03
+			}
+		}
+		EGY_engfriendship3 = {
+		
+			picture = idea_chi_hyper_inflation3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		EGY_engfriendship4 = {
+		
+			picture = idea_chi_hyper_inflation4
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+		EGY_engfriendship5 = {
+		
+			picture = idea_chi_hyper_inflation5
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_factor = 0.15
+				consumer_goods_factor = -0.15
+			}
+		}
+	}
+}
