@@ -1,0 +1,17 @@
+EGY_army_modifier = { # Egypt Army
+	enable = { always = yes }
+	icon = GFX_idea_EGY_advisors_egypt
+
+	cavalry_attack_factor = EGY_cavalry_attack_factor
+	cavalry_defence_factor = EGY_cavalry_defence_factor
+	attrition = EGY_attrition
+	supply_consumption_factor = EGY_supply_consumption_factor
+	out_of_supply_factor = EGY_out_of_supply_factor
+	army_org_factor = EGY_army_org_factor
+	army_attack_factor = EGY_army_attack_factor
+	army_defence_factor = EGY_army_defence_factor
+	conscription_factor = EGY_conscription_factor
+	research_speed_factor = EGY_research_speed_factor
+	production_speed_arms_factory_factor = EGY_production_speed_arms_factory_factor
+	trade_laws_cost_factor = EGY_trade_laws_cost_factor
+}
