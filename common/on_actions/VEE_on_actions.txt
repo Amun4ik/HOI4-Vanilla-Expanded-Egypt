@@ -2,6 +2,13 @@ on_actions = {
 
 	on_startup = {
 		effect = {
+			ENG = {
+				set_autonomy = {
+				target = EGY
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+				}
+			}
 			883 = { add_claim_by = EGY }
 			551 = { add_claim_by = EGY }
 			767 = { add_claim_by = EGY }
@@ -10,11 +17,27 @@ on_actions = {
 			887 = { add_claim_by = EGY }
 			885 = { add_claim_by = EGY }
 			884 = { add_claim_by = EGY }
-			ENG = { 	
-				set_autonomy = {
-				target = EGY
-				autonomous_state = autonomy_dominion
-				freedom_level = 0.2
+			EGY = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+				}	
+				add_popularity = {
+					ideology = neutrality
+					popularity = 1.0
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.4
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.3
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
 			}
 		}
 	}
